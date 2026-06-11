@@ -4,6 +4,9 @@ import "./index.css"
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
+  const [visiblityHandle, setvisiblityHandle] = useState(false)
+  console.log(visiblityHandle, "check");
+
   const [data, setData] = useState(() => {
     const saved = localStorage.getItem("saved");
     return saved ? JSON.parse(saved) : [
@@ -68,25 +71,23 @@ function App() {
       setData([...data,])
     ))
   }
-  // function deleteFunc() {
-  //   localStorage.clear()
-  // }
-  // localStorage.getItem(JSON.parse(data))
+
   return (
 
-    <div className='main' style={{backgroundColor: darkMode? "black" : "white"}}>
+    <div className='main' style={{ backgroundColor: darkMode ? "black" : "white" }}>
+      <nav style={{backgroundColor: darkMode? "white" : "black"}}>
+        <p>HC</p><span>Hamza's Company</span>
+        <button onClick={() => setvisiblityHandle(!visiblityHandle)}><PlusIcon /></button>
+        <div className="toggle">
+          <button className="day" onClick={() => setDarkMode(!darkMode)} style={{transform: darkMode? "translate(40px)" : "translate(0px)", transition: "1s"}}>{darkMode ? <img src="https://img.icons8.com/ios_filled/512/sun--v3.png" alt="" /> : <img src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg" alt="" />}</button>
+        </div>
+      </nav>
 
-    <div className="toggle">
-      <button className="day" onClick={()=> setDarkMode(true)}><img src="https://img.icons8.com/ios_filled/512/sun--v3.png" alt="" /></button>
-      <button className="night" onClick={()=> window.location.reload()}><img src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg" alt="" /></button>
-    </div>
-    <div className="search">
-      <input type="text" />
-      <button>Search</button>
-    </div>
+
+
       <div>
         {/* Form  */}
-        <div className="form">
+        <div className="form" style={{ display: visiblityHandle ? "flex" : "none" }}>
           <h2>Add Employee</h2>
           <input type="url" onChange={(e) => setUserImage(e.target.value)} value={userImage} placeholder='Enter Image URL' />
           <input type="text" onChange={(e) => setUserName(e.target.value)} value={userName} placeholder='Enter Employee Name' />

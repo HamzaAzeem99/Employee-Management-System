@@ -5,16 +5,18 @@
   font-family: sans-serif;
 }
 
-body{
+body {
   width: 100vw;
   overflow-x: hidden;
 
 }
+
 .main {
   width: 100%;
   overflow-x: hidden;
-  padding: 20px;
   height: 100vh;
+  transition: 1s;
+
 }
 
 .form {
@@ -26,6 +28,7 @@ body{
   background-color: whitesmoke;
   padding: 10px;
   border-radius: 10px;
+  margin-top: 100px;
 }
 
 .form button {
@@ -61,7 +64,7 @@ body{
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 200px;
 }
 
 .card {
@@ -232,6 +235,31 @@ body{
   background-color: transparent;
 }
 
-.toggle button:hover {
+
+
+nav {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  width: 100vw;
+  height: 80px;
   background-color: black;
+  gap: 10px;
+  transition: 1s;
+
+  position: absolute;
+}
+
+nav p {
+  color: #DEDBD4;
+  font-size: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Inter, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -5px;
+}
+
+nav span {
+  color: #DEDBD4;
+  font-size: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Inter, Arial, sans-serif;
 }
