@@ -6,6 +6,7 @@
 }
 
 body {
+  cursor: url(./assets//Sonk--cursor--SweezyCursors\ \(1\).png),auto;
   width: 100vw;
   overflow-x: hidden;
 
@@ -37,7 +38,8 @@ body {
   border-radius: 10px;
   width: 40px;
   height: 40px;
-  cursor: pointer;
+  cursor: url(./assets/Frutiger\ Aero\ Blue\ Arrow\ &\ Hand--pointer--SweezyCursors\ \(1\).png),auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +78,8 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid #88835D;
-  cursor: pointer;
+  cursor: url(./assets/Frutiger\ Aero\ Blue\ Arrow\ &\ Hand--pointer--SweezyCursors\ \(1\).png),auto;
+
   box-shadow: 0px 0px 2px #88835D;
   transition: 0.6s;
 
@@ -167,7 +170,8 @@ body {
   padding: 10px 30px;
   height: 40px;
   border: 1px solid red;
-  cursor: pointer;
+  cursor: url(./assets/Frutiger\ Aero\ Blue\ Arrow\ &\ Hand--pointer--SweezyCursors\ \(1\).png),auto;
+
   border-radius: 10px;
   background-color: transparent;
   color: red;
@@ -185,7 +189,8 @@ body {
   padding: 10px 30px;
   height: 40px;
   border: 1px solid green;
-  cursor: pointer;
+  cursor: url(./assets/Frutiger\ Aero\ Blue\ Arrow\ &\ Hand--pointer--SweezyCursors\ \(1\).png),auto;
+
   border-radius: 10px;
   background-color: transparent;
   color: green;
@@ -206,11 +211,12 @@ body {
   border-radius: 20px;
   width: 80px;
   position: absolute;
-  right: 50px;
+  right: 20px;
 }
 
 .toggle button {
-  cursor: pointer;
+  cursor: url(./assets/Frutiger\ Aero\ Blue\ Arrow\ &\ Hand--pointer--SweezyCursors\ \(1\).png),auto;
+
   padding: 10px;
   width: 40px;
   height: 40px;
@@ -262,4 +268,38 @@ nav span {
   color: #DEDBD4;
   font-size: 20px;
   font-family: 'Helvetica Neue', Helvetica, Inter, Arial, sans-serif;
+}
+
+@media screen and (max-width:526px) {
+  .card {
+  width: 90vw;
+  height: 520px;
+padding: 0;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+padding-right: 9vw;
+  width: 100vw;
+}
+.right img{
+  margin-top: 10px;
+  border-radius: 100%;
+}
+
+
+
+.left {
+  padding: 0px;
+  gap: 10px;
+}
+
+.btns {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
 }

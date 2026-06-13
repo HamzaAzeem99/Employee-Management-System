@@ -64,7 +64,25 @@ function App() {
     );
   };
 
-
+  const CrossIcon = ({ size = 24, color = 'currentColor', strokeWidth = 2, ...props }) => {
+    return (
+      <svg
+        xmlns="http://w3.org"
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        {...props}
+      >
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    );
+  };
   function editAll() {
     data.map((users, index) => (
       users.userName = prompt(`${users.userName} ${index + 1} User`),
@@ -75,11 +93,11 @@ function App() {
   return (
 
     <div className='main' style={{ backgroundColor: darkMode ? "black" : "white" }}>
-      <nav style={{backgroundColor: darkMode? "white" : "black"}}>
+      <nav style={{ backgroundColor: darkMode ? "#4F4C47" : "black" }}>
         <p>HC</p><span>Hamza's Company</span>
-        <button onClick={() => setvisiblityHandle(!visiblityHandle)}><PlusIcon /></button>
+        <button onClick={() => setvisiblityHandle(!visiblityHandle)}>{visiblityHandle? <CrossIcon /> : <PlusIcon />  }</button>
         <div className="toggle">
-          <button className="day" onClick={() => setDarkMode(!darkMode)} style={{transform: darkMode? "translate(40px)" : "translate(0px)", transition: "1s"}}>{darkMode ? <img src="https://img.icons8.com/ios_filled/512/sun--v3.png" alt="" /> : <img src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg" alt="" />}</button>
+          <button className="day" onClick={() => setDarkMode(!darkMode)} style={{ transform: darkMode ? "translate(40px)" : "translate(0px)", transition: "1s" }}>{darkMode ? <img src="https://img.icons8.com/ios_filled/512/sun--v3.png" alt="" /> : <img src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg" alt="" />}</button>
         </div>
       </nav>
 
